@@ -90,7 +90,7 @@ export class AppComponent implements OnInit {
     }
 
     private getHeroes() {
-        this.heroes = this.heroService.getHeroes();
+        this.heroService.getHeroes().then(heroes => this.heroes = heroes);
     }
 
 }
